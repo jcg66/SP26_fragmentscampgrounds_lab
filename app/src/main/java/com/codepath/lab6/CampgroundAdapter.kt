@@ -9,8 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 const val CAMPGROUND_EXTRA = "CAMPGROUND_EXTRA"
 
@@ -46,7 +47,8 @@ class CampgroundAdapter(private val context: Context, private val campgrounds: L
             Glide.with(context)
                 .load(campground.imageUrl)
                 .placeholder(R.drawable.campgrounds_image_placeholder)
-                .apply(RequestOptions.bitmapTransform(RoundedCorners(24)))
+                .transform(CenterCrop(), RoundedCorners(24))
+                .transition(DrawableTransitionOptions.withCrossFade())
                 .into(campgroundImageView)
         }
 

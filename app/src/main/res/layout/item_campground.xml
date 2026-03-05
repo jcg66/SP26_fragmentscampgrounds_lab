@@ -11,13 +11,11 @@
         android:id="@+id/itemCampgroundImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="12dp"
         android:contentDescription="Campground Image"
-        android:scaleType="centerCrop"
-        app:layout_constraintWidth_percent="0.35"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.35" />
 
     <!-- Campground Title -->
     <TextView

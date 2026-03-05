@@ -4,7 +4,7 @@ Submitted by: **James Girgis**
 
 **Parks and Campgrounds Explorer** is a multi-fragment, multi-screen Android app that allows users to view lists of parks and campgrounds using a navigation bar.
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
@@ -21,7 +21,9 @@ The following **optional** features are implemented:
 - [ ] Respond to device orientation changes without resetting the application
 
 The following **additional** features are implemented:
-- [x] Use Glide to add rounded corners to images and display placeholder images
+
+- [x] Use Glide to add rounded corners, display placeholder images, and make images fade-in
+- [x] Use a `ScrollView` for `activity_detail.xml` so that the image doesn't push the elements offscreen
 
 ## Video Walkthrough
 
