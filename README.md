@@ -4,14 +4,14 @@ Submitted by: **James Girgis**
 
 **Parks and Campgrounds Explorer** is a multi-fragment, multi-screen Android app that allows users to view lists of parks and campgrounds using a navigation bar.
 
-Time spent: **1** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **Add and implement Bottom Navigation to your application**
-- [ ] **Dynamically use fragments within Activities**
+- [x] **Add and implement Bottom Navigation to your application**
+- [x] **Dynamically use fragments within Activities**
 - [x] **Customize the toolbar and icons**
 
 The following **additional** features are implemented:

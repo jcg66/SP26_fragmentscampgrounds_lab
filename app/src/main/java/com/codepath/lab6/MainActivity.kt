@@ -40,12 +40,14 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.action_parks ->
-                    // do something here
+                R.id.action_parks -> {
+                    replaceFragment(ParksFragment())
                     true
-                R.id.action_campgrounds ->
-                    // do something here
+                }
+                R.id.action_campgrounds -> {
+                    replaceFragment(CampgroundFragment())
                     true
+                }
                 else -> true
             }
         }
