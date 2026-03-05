@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codepath.lab6.databinding.ActivityMainBinding
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.serialization.json.Json
 import okhttp3.Headers
 import org.json.JSONException
@@ -37,6 +38,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        // setup bottom navigation view
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.action_parks ->
+                    // do something here
+                    true
+                R.id.action_campgrounds ->
+                    // do something here
+                    true
+                else -> true
+            }
+        }
 
         // Find RecyclerView and set up adapter
         parksRecyclerView = findViewById(R.id.parks)
