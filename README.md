@@ -4,7 +4,7 @@ Submitted by: **James Girgis**
 
 **Parks and Campgrounds Explorer** is a multi-fragment, multi-screen Android app that allows users to view lists of parks and campgrounds using a navigation bar.
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
@@ -14,11 +14,14 @@ The following **required** functionality is completed:
 - [x] **Dynamically use fragments within Activities**
 - [x] **Customize the toolbar and icons**
 
-The following **additional** features are implemented:
+The following **optional** features are implemented:
 
 - [ ] Add and implement options in the Settings screen
 - [ ] Customize a Home screen using the [Most Popular NPS Campgrounds API](https://www.nps.gov/subjects/developer/api-documentation.htm)
 - [ ] Respond to device orientation changes without resetting the application
+
+The following **additional** features are implemented:
+- [x] Use Glide to add rounded corners to images and display placeholder images
 
 ## Video Walkthrough
 
@@ -26,6 +29,7 @@ The following **additional** features are implemented:
 ### Resources
 - Code forked from [codepath/and102-lab6-starter](https://github.com/codepath/and102-lab6-starter)
 - `README.md` template was provided as part of the CodePath project course material
+- `fragments_campgrounds_app_icon.png` and `campgrounds_image_placeholder.png` are my own work
 - National Park Service API: https://www.nps.gov/subjects/developer/index.htm
 
 ## License
