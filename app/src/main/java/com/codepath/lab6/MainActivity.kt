@@ -1,8 +1,10 @@
 package com.codepath.lab6
 
+import android.app.Fragment
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -47,5 +49,14 @@ class MainActivity : AppCompatActivity() {
                 else -> true
             }
         }
+
+        replaceFragment(ParksFragment())
+    }
+
+    private fun replaceFragment(fragment: androidx.fragment.app.Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.main_frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 }
