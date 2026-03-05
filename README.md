@@ -27,6 +27,14 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/SqJzcEI.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+(If the inline image preview above doesn't load, you can also view the file on Imgur here: https://imgur.com/SqJzcEI.gif )
+
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
+
 ## Notes
 ### Resources
 - Code forked from [codepath/and102-lab6-starter](https://github.com/codepath/and102-lab6-starter)
