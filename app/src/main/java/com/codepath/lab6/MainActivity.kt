@@ -22,13 +22,8 @@ fun createJson() = Json {
 }
 
 private const val TAG = "MainActivity/"
-private val API_KEY = BuildConfig.API_KEY
-private val PARKS_URL = "https://developer.nps.gov/api/v1/parks?api_key=${API_KEY}"
 
 class MainActivity : AppCompatActivity() {
-
-    private val parks = mutableListOf<Park>()
-    private lateinit var parksRecyclerView: RecyclerView
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,45 +47,5 @@ class MainActivity : AppCompatActivity() {
                 else -> true
             }
         }
-
-        // Find RecyclerView and set up adapter
-        parksRecyclerView = findViewById(R.id.parks)
-        val parksAdapter = ParksAdapter(this, parks)
-        parksRecyclerView.adapter = parksAdapter
-
-        // Use LinearLayoutManager with a divider
-        parksRecyclerView.layoutManager = LinearLayoutManager(this).also {
-            val dividerItemDecoration = DividerItemDecoration(this, it.orientation)
-            parksRecyclerView.addItemDecoration(dividerItemDecoration)
-        }
-
-        // Fetch data from NPS Parks API
-        val client = AsyncHttpClient()
-        client.get(PARKS_URL, object : JsonHttpResponseHandler() {
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                response: String?,
-                throwable: Throwable?
-            ) {
-                Log.e(TAG, "Failed to fetch parks: $statusCode")
-            }
-
-            override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                Log.i(TAG, "Successfully fetched parks: $json")
-                try {
-                    val parsedJson = createJson().decodeFromString(
-                        ParksResponse.serializer(),
-                        json.jsonObject.toString()
-                    )
-                    parsedJson.data?.let { list ->
-                        parks.addAll(list)
-                        parksAdapter.notifyDataSetChanged()
-                    }
-                } catch (e: JSONException) {
-                    Log.e(TAG, "Exception: $e")
-                }
-            }
-        })
     }
 }
